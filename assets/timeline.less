@@ -1,0 +1,63 @@
+
+@pending-color: #e9e9e9;
+
+.@{prefixName}-timeline {
+
+	&-item {
+		list-style: none;
+		position: relative;
+		padding-bottom: 6px;
+        &:last-child {
+            .@{prefixName}-timeline-item-tail {
+                display: none;
+            }
+        }
+
+		&-head{
+			position: absolute;
+			width: 12px;
+			height: 12px;
+			background-color: #fff;
+			border-radius: 100px;
+			border-width: 2px;
+			border-style: solid;
+            z-index: 1;
+			&-info {
+				border-color: @brand-info;
+			}
+			&-warning {
+				border-color: @brand-warning;
+			}
+			&-success {
+				border-color: @brand-success;
+			}
+			&-danger {
+				border-color: @brand-danger;
+			}
+			&-pending {
+				border-color: @pending-color;
+			}
+		}
+		&-content {
+			margin: 0;
+			padding: 0 0 10px 24px;
+			font-size: 12px;
+			position: relative;
+			top: -2px;
+
+			p {
+				padding: 0;
+				margin: 0;
+				text-align: justify;
+			}
+		}
+
+		&-tail {
+			position: absolute;
+			left: 5px;
+			top: 0;
+			height: 100%;
+			border-left: 2px solid @pending-color;
+		}
+	}
+}
