@@ -1,16 +1,18 @@
-# Timeline 时间轴
+# Reacr Salt - Timeline 时间轴
 
 ### 用途
+
 * 当有一系列信息需要从上至下按时间排列时；
 * 需要有一条时间轴进行视觉上的串联时；
 
 ### 用法
-import Timeline from '@myfe/cat-timeline';
 
 ```
+import Timeline from 'rs-timeline';
+
 <Timeline {...data} />
 ```
-data
+### Data数据结构
 ```
 {
 	pending : true,
@@ -30,9 +32,11 @@ data
 }
 ```
 
+### API
+
 | 参数 | 说明 | 类型 | 默认值 | 可选值 |
 | -------- |:-------:|:------:|:--:| ----:|
-| pending  | 幽灵节点  | bool | false |
-| items | 节点对象数组  | array | [] |
+| pending  | 幽灵节点  | bool | false | |
+| items | 节点对象数组  | array | [] | |
 | color | 节点状态 | string | blue | blue,green,red |
-| texts | 节点展示文本 | array | [] |
+| texts | 节点展示文本 | array | [] | |
